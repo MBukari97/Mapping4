@@ -1,5 +1,6 @@
 package com.example.a2bukam38.mapping;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -22,16 +23,25 @@ public class MapChooseActivity extends AppCompatActivity implements  View.OnClic
         Button regularBtn = (Button)findViewById(R.id.btnRegular),
                 hikeBikeBtn = (Button)findViewById(R.id.btnHikeBikeMap);
 
-        regularBtn.setClickListener(this);
+        regularBtn.setOnClickListener(this);
         hikeBikeBtn.setOnClickListener(this);
     }
 
     public void onClick(View view)
     {
-        boolean
-
+        Intent intent = new Intent();
+        Bundle bundle=new Bundle();
+        boolean hikebikemap=false;
+        if (view.getId()==R.id.btnHikeBikeMap)
+        {
+            hikebikemap=true;
+        }
+        bundle.putBoolean("com.example.hikebikemap",hikebikemap);
+        intent.putExtras(bundle);
+        setResult(RESULT_OK,intent);
+        finish();
     }
 
-    }
+}
 
 

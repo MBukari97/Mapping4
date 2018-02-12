@@ -25,6 +25,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapChooseActivity" android:label="@string/selectmap"></activity>
+
+
+        <!--
+        <activity android:name=".PreferencesActivity" android:label="@string/preferences">
+
+        </activity>
+        -->
     </application>
+
 
 </manifest>

@@ -4,4 +4,5 @@
     <string name="regularview">regular view</string>
     <string name="hikebikemapview"> hike bike mapview</string>
     <string name="selectmap"> select map</string>
+    <string name="preferences"> preferences</string>
 </resources>
