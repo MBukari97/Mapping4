@@ -5,4 +5,8 @@
     <string name="hikebikemapview"> hike bike mapview</string>
     <string name="selectmap"> select map</string>
     <string name="preferences"> preferences</string>
+    <string name="latlongactivity"> set location</string>
+    <string name="location_button"> Go! </string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
 </resources>

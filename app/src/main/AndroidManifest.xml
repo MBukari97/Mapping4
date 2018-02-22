@@ -25,6 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MapChooseActivity" android:label="@string/selectmap"></activity>
+        <activity android:name=".LatLongChooseActivity" android:label="@string/latlongactivity"></activity>
+
 
 
         <!--

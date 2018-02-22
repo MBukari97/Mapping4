@@ -24,6 +24,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     MapView mv;
+    Double latitude = 53.430829;
+    Double longitude = -2.960830;
+
 
     @Override
 
@@ -41,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         mv.getController() .setZoom(16);
 
-        mv.getController() .setCenter (new GeoPoint(53.430829, -2.960830));
+        mv.getController() .setCenter (new GeoPoint(latitude, longitude));
     }
 
     public void onStart()
@@ -73,6 +76,13 @@ public class MainActivity extends AppCompatActivity {
         {
             Intent intent = new Intent(this, MapChooseActivity.class);
             startActivityForResult(intent, 0);
+            return true;
+        }
+
+        else if(item.getItemId() == R.id.setlocation)
+        {
+            Intent intent = new Intent(this, LatLongChooseActivity.class);
+            startActivityForResult(intent, 1);
             return true;
         }
         /*
@@ -107,5 +117,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
+
+        else if(requestCode==1)
+        {
+
+            if (resultCode==RESULT_OK)
+            {
+                Bundle extras=intent.getExtras();
+                latitude = extras.getDouble("com.example.latitude");
+                longitude = extras.getDouble("com.example.longitude");
+                mv.getController() .setCenter (new GeoPoint(latitude, longitude));
+
+
+            }
+        }
+
     }
 }
